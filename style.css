@@ -1,5 +1,6 @@
 .flexContainer {
   display: flex;
+  flex-direction: row;
 }
 
 h3 {
@@ -9,9 +10,37 @@ h3 {
 
 p {
     padding: 25px 50px 75px 100px;
-    width: 33%:
-}
-
-
+        width: 33%;
 
 }
+
+img {
+  padding: 25px 50px 75px 100px;
+  width:33%;
+}
+
+.workGrid {
+  display: grid;
+  grid-area: auto/auto/auto/1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+  .flexContainer {
+    flex-direction: column;
+}
+  h3 {
+    width: 100%;
+  }
+  p {
+    width: 100%;
+  }
+  img { width: 100%;
+  }
+  .workGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}}
+
+
